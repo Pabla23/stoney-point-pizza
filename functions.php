@@ -165,6 +165,11 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+ * Custom post types and taxonomy.
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
