@@ -16,12 +16,129 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<section class="home-intro-section">
+			<?php
+			the_title();
+			the_custom_logo();
+			?>
+			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn"><p>Order Now</p></a>
+		</section>
 
-		<?php
-		the_title();
+		<section class="home-promotions-section">
+			<h2>Promotions:</h2>
 
-		?>
+			<?php
+			$args = array(
+				'post_type'      => 'shop_coupon',
+				'posts_per_page' => 4,
+			);
 
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) {
+				?>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+					<?php
+					while( $query->have_posts() ) {
+						$query->the_post();
+						?>
+						<div class="swiper-slide">
+							<p>Code: <?php the_title(); ?></p>
+							<p><?php the_excerpt(); ?></p>
+						</div>
+						<?php
+					}
+					?>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<?php
+				wp_reset_postdata();
+			}
+			?>
+
+			<?php
+			$args = array(
+				'post_type'      => 'spp-testimonial',
+				'posts_per_page' => 1,
+			);
+
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) {
+				?>
+				<div class="rand-testimonial">
+				<?php
+				while( $query->have_posts() ) {
+					$query->the_post();
+					?>
+					<p><?php the_content(); ?></p>
+					<?php
+				}
+				?>
+				</div>
+				<?php
+				wp_reset_postdata();
+			}
+			?>
+		</section>
+
+		<section class="home-features-section">
+			<?php
+			$args = array(
+				'post_type'      => 'spp-item',
+				'posts_per_page' => 3,
+				'orderby'        => 'rand',
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'spp-itemcategory',
+						'field'    => 'slug',
+						'terms'    => 'signature-pizzas',
+					),
+				),
+			);
+
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) {
+
+				while( $query->have_posts() ) {
+					$query->the_post();
+					?>
+					<article class="item-container">
+						<?php the_post_thumbnail( 'feature-home' ); ?>
+						<p><?php the_title(); ?></p>						
+					</article>
+					<?php
+				}
+				wp_reset_postdata();
+			}
+			?>
+		</section>
+
+		<section class="home-about-section">
+			<?php
+			if( function_exists( 'get_field' ) ) {
+				if( get_field( 'about_section_heading' ) ) {
+					?>
+					<h2><?php the_field( 'about_section_heading' ); ?></h2>
+					<?php
+				}
+
+				if( get_field( 'about_section_excerpt' ) ) {
+					?>
+					<p><?php the_field( 'about_section_excerpt' ); ?></p>
+					<?php
+				}
+
+				if( get_field( 'read_more' ) ) {
+					?>
+					<a href="<?php the_field( 'read_more' ); ?>" class="read-more-btn btn">Read More</a>
+					<?php
+				}
+			}
+			?>
+		</section>
 	</main><!-- #main -->
 
 <?php
