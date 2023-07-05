@@ -187,3 +187,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// enqueue custom product overlay script
+function enqueue_custom_product_overlay_script() {
+    wp_enqueue_script( 'custom-product-overlay-script', get_template_directory_uri() . '/js/custom-product-overlay.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_product_overlay_script' );
+
+//remove zoom on single-product image gallery 
+add_action( 'after_setup_theme', 'remove_product_image_zoom_support', 100 );
+function remove_product_image_zoom_support() {
+	remove_theme_support( 'wc-product-gallery-zoom' );
+}
