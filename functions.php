@@ -108,6 +108,10 @@ function stoney_point_setup() {
 	add_image_size( 'feature-home', 750, 450, true);
 	add_image_size( 'feature-home-square', 600, 600, true);
 
+	// Image size for the images on the about page
+	add_image_size( 'info-about', 400, 500, true);
+	
+
 
 }
 add_action( 'after_setup_theme', 'stoney_point_setup' );
