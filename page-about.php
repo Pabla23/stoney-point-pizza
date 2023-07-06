@@ -16,9 +16,11 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+
+		<h1><?php the_title(); ?></h1>
+		
 		<section class="about-intro-section">
 
-			<h1><?php the_title(); ?></h1>
 			<?php
 			the_post_thumbnail( 'feature-home' );
 			?>
