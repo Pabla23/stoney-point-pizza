@@ -28,6 +28,13 @@ get_header();
 
 		<section class="contact-map-section">
 			<h2>Quick Finder</h2>
+			<?php
+			if( function_exists( 'get_field' ) ) {
+				if( get_field( 'google_map_stoney' ) ) {
+					
+				}
+			}
+			?>
 		</section>
 
 		<section class="contact-locations-section">
