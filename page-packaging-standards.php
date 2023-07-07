@@ -17,85 +17,99 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<h1><?php the_title(); ?></h1>
-	<?php the_post_thumbnail(); ?>
+		<h1><?php the_title(); ?></h1>
+		<?php the_post_thumbnail(); ?>
 
-	<section class="standards-intro-section">
 		<?php
-		if( function_exists( 'get_field' ) ) {
-			if( get_field( 'introduction_paragraph' ) ) {
-				?>
-				<p><?php the_field( 'introduction_paragraph' ); ?></p>
-				<?php
-			}
-		}
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
 		?>
-	</section>
 
-	<?php
-	$sections = array( 'pizza_preparation', 'pizza_packaging', 'timely_and_professional_delivery');
-
-	foreach( $sections as $section) {
-		?>
-		<section>
-			<?php
-			if( have_rows( $section ) ) {
-
-				if( $section === 'pizza_preparation' ) {
-					?>
-					<h2>Pizza Preparation</h2>
-					<?php
-				}
-				else if( $section === 'pizza_packaging' ) {
-					?>
-					<h2>Pizza Packaging</h2>
-					<?php
-				}
-				else if( $section === 'timely_and_professional_delivery' ) {
-					?>
-					<h2>Pizza Delivery</h2>
-					<?php
-				}
-
-				while( have_rows( $section ) ) : the_row();
-
-					$heading = get_sub_field( $section . '_heading' );
-					$paragraph = get_sub_field( $section . '_paragraph' );
-					?>
-					<h3><?php echo $heading; ?></h3>
-					<p><?php echo $paragraph; ?></p>
-					<?php
-
-				endwhile;
-			}
-			?>
-		</section>
-
-		<section class="standards-conclusion-section">
+		<section class="standards-intro-section">
 			<?php
 			if( function_exists( 'get_field' ) ) {
-
-				?>
-				<h2>Your Feedback</h2>
-				<?php
-
-				if( get_field( 'packaging_&_standards_conclusion' ) ) {
+				if( get_field( 'introduction_paragraph' ) ) {
 					?>
-					<p><?php the_field( 'packaging_&_standards_conclusion' ); ?></p>
-					<?php
-				}
-
-				if ( get_field( 'link_to_location_contact' ) ) {
-					?>
-					<a href="<?php the_field( 'link_to_location_contact' ); ?>" class="standards-page-btn btn"><p>Contact Us</p></a>
+					<p><?php the_field( 'introduction_paragraph' ); ?></p>
 					<?php
 				}
 			}
 			?>
 		</section>
+
 		<?php
-	}
-	?>
+		$sections = array( 'pizza_preparation', 'pizza_packaging', 'timely_and_professional_delivery');
+
+		foreach( $sections as $section) {
+			?>
+			<section>
+				<?php
+				if( have_rows( $section ) ) {
+
+					if( $section === 'pizza_preparation' ) {
+						?>
+						<h2>Pizza Preparation</h2>
+						<?php
+					}
+					else if( $section === 'pizza_packaging' ) {
+						?>
+						<h2>Pizza Packaging</h2>
+						<?php
+					}
+					else if( $section === 'timely_and_professional_delivery' ) {
+						?>
+						<h2>Pizza Delivery</h2>
+						<?php
+					}
+
+					while( have_rows( $section ) ) : the_row();
+
+						$heading = get_sub_field( $section . '_heading' );
+						$paragraph = get_sub_field( $section . '_paragraph' );
+						?>
+						<h3><?php echo $heading; ?></h3>
+						<p><?php echo $paragraph; ?></p>
+						<?php
+
+					endwhile;
+				}
+				?>
+			</section>
+
+			<section class="standards-conclusion-section">
+				<?php
+				if( function_exists( 'get_field' ) ) {
+
+					?>
+					<h2>Your Feedback</h2>
+					<?php
+
+					if( get_field( 'packaging_&_standards_conclusion' ) ) {
+						?>
+						<p><?php the_field( 'packaging_&_standards_conclusion' ); ?></p>
+						<?php
+					}
+
+					if ( get_field( 'link_to_location_contact' ) ) {
+						?>
+						<a href="<?php the_field( 'link_to_location_contact' ); ?>" class="standards-page-btn btn"><p>Contact Us</p></a>
+						<?php
+					}
+				}
+				?>
+			</section>
+			<?php
+		}
+		?>
 
 	</main><!-- #main -->
 

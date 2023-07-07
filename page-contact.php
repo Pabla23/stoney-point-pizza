@@ -19,6 +19,20 @@ get_header();
 
 		<h1><?php the_title(); ?></h1>
 
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+		
 		<section class="contact-intro-section">
 
 			<p>Don't feel like going out tonight? We deliver!</p>
@@ -29,11 +43,11 @@ get_header();
 		<section class="contact-map-section">
 			<h2>Quick Finder</h2>
 			<?php
-			if( function_exists( 'get_field' ) ) {
-				if( get_field( 'google_map_stoney' ) ) {
-					
-				}
-			}
+			// if( function_exists( 'get_field' ) ) {
+			// 	if( get_field( 'google_map_stoney' ) ) {
+
+			// 	}
+			// }
 			?>
 		</section>
 
