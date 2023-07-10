@@ -191,6 +191,11 @@ function stoney_point_scripts() {
 add_action( 'wp_enqueue_scripts', 'stoney_point_scripts' );
 
 /**
+ * Admin customization features
+ */
+require get_template_directory() . 'inc/admin-customization.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
