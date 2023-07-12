@@ -188,14 +188,12 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// enqueue custom product overlay script
-function enqueue_custom_product_overlay_script() {
-    wp_enqueue_script( 'custom-product-overlay-script', get_template_directory_uri() . '/js/custom-product-overlay.js', array( 'jquery' ), '1.0', true );
+// enqueue custom js files
+function enqueue_product_scripts() {
+    wp_enqueue_script( 'product-overlay-script', get_template_directory_uri() . '/js/product-overlay.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'product-archive-tabs', get_template_directory_uri() . '/js/product-archive-tabs.js', array( 'jquery' ), '1.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_custom_product_overlay_script' );
+add_action( 'wp_enqueue_scripts', 'enqueue_product_scripts' );
 
-//remove zoom on single-product image gallery 
-add_action( 'after_setup_theme', 'remove_product_image_zoom_support', 100 );
-function remove_product_image_zoom_support() {
-	remove_theme_support( 'wc-product-gallery-zoom' );
-}
+// disable sku on single product page
+add_filter( 'wc_product_sku_enabled', '__return_false' );

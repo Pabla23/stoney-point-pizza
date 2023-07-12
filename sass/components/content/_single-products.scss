@@ -7,3 +7,9 @@
 	position: absolute;
 	z-index: 1;
 }
+
+.site-main {
+	.woocommerce-breadcrumb {
+		display: none;
+	}
+}
