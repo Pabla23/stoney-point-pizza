@@ -99,6 +99,20 @@ function stoney_point_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	/**
+	 * Adds custom images sizes
+	 * 
+	 */
+	// Images for the featured items on the home page
+	add_image_size( 'feature-home', 750, 450, true);
+	add_image_size( 'feature-home-square', 600, 600, true);
+
+	// Image size for the images on the about page
+	add_image_size( 'info-about', 400, 500, true);
+	
+
+
 }
 add_action( 'after_setup_theme', 'stoney_point_setup' );
 
@@ -146,8 +160,40 @@ function stoney_point_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Enqueue Swiper on the home page
+	if( is_front_page() ) {
+
+		wp_enqueue_style(
+			'swiper-styles',
+			get_template_directory_uri() . '/css/swiper-bundle.css',
+			array(),
+			'10.0.3'
+		);
+
+		wp_enqueue_script(
+			'swiper-scripts',
+			get_template_directory_uri() . '/js/swiper-bundle.min.js',
+			array(),
+			'10.0.3',
+			true
+		);
+
+		wp_enqueue_script(
+			'swiper-settings',
+			get_template_directory_uri() . '/js/swiper-settings.js',
+			array( 'swiper-scripts' ),
+			_S_VERSION,
+			true
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'stoney_point_scripts' );
+
+/**
+ * Admin customization features
+ */
+require get_template_directory() . 'inc/admin-customization.php';
 
 /**
  * Implement the Custom Header feature.
