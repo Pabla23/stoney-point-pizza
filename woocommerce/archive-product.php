@@ -64,10 +64,14 @@ if ( woocommerce_product_loop() ) {
 			}
 
 			// loop through pizza categories to create buttons
+			$i=0;
 			foreach($pizza_names as $pizza) :
 				?>
-				<button class="pizza-type-button"><?php echo $pizza; ?></button>
+				<button class="pizza-type-button" data-index='<?php echo $i; ?>'>
+					<?php echo $pizza; ?>
+				</button>
 				<?php
+				$i++;
 			endforeach;
 			?>
 		</div>
@@ -126,6 +130,8 @@ if ( woocommerce_product_loop() ) {
 	</div>
 
 	<div class="slider-container specialty-container">
+		<h2>Specialty</h2>
+
 		<div class="nav-slider specialty-slider">
 			<?php
 			$specialty_names = array();
@@ -143,10 +149,14 @@ if ( woocommerce_product_loop() ) {
 			endforeach;
 
 			// loop through specialty categories to create buttons
+			$i=0;
 			foreach($specialty_names as $specialty) :
 				?>
-				<button class="specialty-type-button"><?php echo $specialty; ?></button>
+				<button class="specialty-type-button" data-index='<?php echo $i; ?>'>
+					<?php echo $specialty; ?>
+				</button>
 				<?php
+				$i++;
 			endforeach;
 			?>
 		</div>

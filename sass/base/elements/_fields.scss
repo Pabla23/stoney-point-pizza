@@ -20,12 +20,18 @@ textarea {
 	padding: 3px;
 
 	&:focus {
-		color: $color__text-input-focus;
+		color: #600000;
 	}
 }
 
 select {
-	border: 1px solid $color__border-input;
+	border: 2px solid #600000;
+	border-radius: 4px;
+	padding: 0.2rem;
+	color: #600000;
+	&:focus, &:active, &:focus-visible {
+		color: #600000;
+	}
 }
 
 textarea {

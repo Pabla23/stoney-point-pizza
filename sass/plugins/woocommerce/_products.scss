@@ -17,44 +17,228 @@ ul.products {
 	}
 }
 
-@media screen and (min-width: 48em) {
+// CUSTOM STYLES
 
-	ul.products {
+.woocommerce-products-header, .pizza-container, .build-own-container, .specialty-container, .deals-container {
+    margin-bottom: 4rem;
+}
 
-		li.product {
+.nav-slider {
+    margin-bottom: 2rem;
 
-			@include column-width(3);
-			float: left;
-			margin-right: $columns__margin;
+    button {
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background-color: transparent;
+        border: 5px solid #600000;
+        border-radius: 1rem;
+        outline: none;
+        color: #600000;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-			&.first {
-				clear: both;
-			}
+    .selected {
+        background-color: #600000;
+        color: #fff;
+    }
+}
 
-			&.last {
-				margin-right: 0;
-			}
-		}
+.onsale {
+    display: none;
+}
+
+
+.post-type-archive-product {
+
+    .site-main {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .price {
+		font-size: 1.1rem;
 	}
 
-	ul.products.columns-1 {
+    #yith-quick-view-content {
+        padding: 0;
+        h1 {
+            font-size: initial;
+        }
+        .variations_button {
+            justify-content: center;
+        }
+        .woocommerce-product-gallery {
+            padding: 0 1rem;
+        }
+    }
 
-		li.product {
-			float: none;
-			width: 100%;
-		}
+    .products {
+        h2, h3 {
+            text-align: center;
+        }
+    
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            grid-column: 1 / -1;
+        }
+    
+        h3 {
+            font-size: 1.1rem;
+        }
+    }
+    // h1, h2, h3 to be moved to another file (typography)
 
-	}
+    .slider-item, .deals-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(130px, 300px));
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
 
-	@for $i from 2 through 6 {
+    .product, .deal-item {
+        text-align: center;
+        .woocommerce-loop-product__link {
+            img {
+                width: 100%;
+            }
+        }
+    }
 
-		ul.products.columns-#{$i} {
+    .build-own-container {
+        li.post-137 {
+            max-width: 200px;
+            margin: 0 auto;
+            //remove quick view button from build your own pizza
+            .yith-wcqv-button {
+                display: none;
+            }
+        }
+    }
 
-			li.product {
+    .deals-container {
+        .deal-item {
+            //remove quick view button from deals
+            .yith-wcqv-button {
+                display: none;
+            }
+        }
+    }
 
-				@include column-width( $i );
-			}
+    .slick-slider {
+        position: absolute;
+        left: 0rem;
+        right: 0rem;
+    }
 
-		}
-	}
+    .slider-items {
+        margin-top: 7rem;
+    }
+
+    .slider-item {
+        animation: fadeIn 0.5s ease-in-out;
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .post-type-archive-product {
+
+        .product, .deal-item {
+            padding: 1rem;
+        }
+
+        .build-own-container {
+            li.post-137 {
+                max-width: 250px;
+            }
+        }
+
+        #yith-quick-view-content {
+            .product {
+                display: block;
+                margin-top: 4rem;
+            }
+            div.summary {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .post-type-archive-product {
+        .slider-item, .deals-container {
+            justify-content: center;
+        }
+
+        .slider-items {
+            margin-top: 2rem;
+        }
+
+        .nav-slider {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(130px, 300px));
+            justify-content: center;
+            button {
+                margin: 0.5rem;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .products {
+        
+            h2 {
+                font-size: 2.5rem;
+            }
+        
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        #yith-quick-view-content {
+            .product_title {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .post-type-archive-product {
+        .slider-item, .deals-container {
+            grid-template-columns: repeat(3, minmax(130px, 300px));
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 1650px) {
+    .post-type-archive-product {
+        .slider-item, .deals-container {
+            grid-template-columns: repeat(4, minmax(130px, 300px));
+        }
+        .build-own-container {
+            li.post-137 {
+                max-width: 300px;
+            }
+        }
+    }
 }
