@@ -6,3 +6,8 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	position: relative;
 }
+.site-main {
+	width: 90%;
+	left: 5%;
+	border-left: solid 3px #600000; 
+}
