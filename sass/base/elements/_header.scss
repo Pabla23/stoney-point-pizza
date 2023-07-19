@@ -1,3 +1,122 @@
 .site-header {
-    background-color: lightcoral;
+
+	background-color: $colour-spp-red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+	.site-branding {
+
+		.custom-logo-link {
+
+			width: 5rem;
+			height: auto;
+            padding: 0.4rem;
+		}
+
+        .site-title {
+            display: none;
+        }
+	}
+
+    .main-navigation {
+        width: fit-content;
+        position: relative;
+
+        .menu-toggle {
+            background-color: transparent;
+            border: dotted 2px transparent ;
+            box-sizing: border-box;
+            color: white;
+
+            svg {
+                color: inherit;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                border: dotted 2px #fc964e;
+            }
+        }
+
+        .menu-main-menu-container {
+            position: fixed;
+            top: 5rem;
+            left: 0;
+            right: 0;
+
+            background-color: $colour-spp-red;
+            text-align: center;
+            color: white;
+
+            ul {
+                margin: 1rem 0;
+
+                li {
+
+                    margin-bottom: 1rem;
+
+                    a,
+                    a:visited {
+                        color: white;
+                        text-decoration: none;
+                        
+                    }
+
+                    a:hover,
+                    a:active,
+                    a:focus {
+                        color: #fc964e;
+                    }
+                }
+            }
+        
+        }
+    }
+
+    @media (min-width: 600px) {
+        
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .site-branding {
+
+            width: 100%;
+            text-align: center;
+
+            .custom-logo-link {
+                width: 8rem;
+            }
+        }
+
+        .main-navigation {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+
+            .menu-main-menu-container {
+                position: relative;
+                top: 0;
+                width: 100%;
+
+                ul {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+
+                    li {
+                        border-bottom: solid 2px white;
+
+                        font-size: 1.1rem;
+                        font-weight: 600;
+
+                    }
+                }
+            }
+        }
+    }
 }

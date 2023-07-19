@@ -49,7 +49,9 @@ function stoney_point_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'stoney-point' ),
+			'menu-1'         => esc_html__( 'Primary', 'stoney-point' ),
+			'footer-links'   => esc_html__( 'Footer Links', 'stoney-point' ),
+			'footer-socials' => esc_html__( 'Footer Socials', 'stoney-point' ),
 		)
 	);
 

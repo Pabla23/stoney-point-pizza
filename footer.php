@@ -12,19 +12,47 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'stoney-point' ) ); ?>">
+		<div class="store-hours">
+			<?php
+			$args = array(
+					'post_type'      => 'spp-location',
+					'posts_per_page' => 1,
+					'order'          => 'ASC',
+				);
+
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) {
+				
+				while( $query->have_posts() ) {
+					$query->the_post();
+
+					if( function_exists( 'get_field' ) ) {
+							if( get_field( 'opening_hours' ) ) {
+								?>
+								<p><?php the_field( 'opening_hours' ); ?></p>
+								<?php
+							}
+					}
+				}
+				wp_reset_postdata();
+			}
+			?>
+		</div>
+
+		<div class="footer-menus">
+			<nav id="footer-links" class="footer-links">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'stoney-point' ), 'WordPress' );
+					wp_nav_menu( array( 'theme_location' => 'footer-links' ) ); 
 				?>
-			</a>
-			<span class="sep"> | </span>
+			</nav>
+
+			<nav id="footer-socials" class="footer-socials">
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'stoney-point' ), 'stoney-point', '<a href="https://stoneypoint.bcitwebdeveloper.ca/">FWD 33</a>' );
+					wp_nav_menu( array( 'theme_location' => 'footer-socials' ) );
 				?>
-		</div><!-- .site-info -->
+			</nav>
+				
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
