@@ -1,4 +1,4 @@
-.post-type-archive-spp-testimonial {
+.page-id-613 {
     .testimonial-section {
         .wp-block-quote {
             padding: 1rem;
@@ -15,20 +15,21 @@
             } 
         }
     }
-    .page-header {
+    h1 {
         text-align: center;
+        grid-column: 2;
     }
 }
 
 
 
 @media (min-width: 800px) {
-    .post-type-archive-spp-testimonial {
+    .page-id-613 {
         .site-main {
             padding: 0;
             display: grid;
             grid-template-columns: 1fr 800px 1fr;
-            .page-header {
+            h1 {
                 grid-column: 2;
             }
             .testimonial-section {
@@ -42,7 +43,7 @@
 }
 
 @media (min-width: 1100px) {
-    .post-type-archive-spp-testimonial {
+    .page-id-613 {
         .site-main {
             padding: 0;
             display: grid;

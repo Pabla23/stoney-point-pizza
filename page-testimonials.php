@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying the Testimonials page
+ *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -12,15 +13,9 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-			<header class="page-header">
-				<?php
-					$archive_title = get_the_archive_title();
-					$archive_title = str_replace('Archives: ', '', $archive_title);
-				?>
-				<h1><?php echo $archive_title; ?></h1>
-			</header><!-- .page-header -->
+		<h1><?php the_title(); ?></h1>
 
-			<?php
+		<?php
 				$args = array(
 					'post_type'      => 'spp-testimonial',
 					'posts_per_page' => -1,
