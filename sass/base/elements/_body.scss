@@ -6,8 +6,20 @@ body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 	position: relative;
 }
-.site-main {
+main {
+	position: relative;
 	width: 90%;
 	left: 5%;
-	border-left: solid 3px #600000; 
+	border-left: solid 3px $brand__color; 
+	border-right: solid 3px $brand__color;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+	main {
+		width: 70%;
+		left: 15%;
+		padding: 5rem;
+	}
 }

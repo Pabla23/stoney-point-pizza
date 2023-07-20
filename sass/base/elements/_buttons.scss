@@ -19,3 +19,28 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+.order-btn {
+	position: relative;
+}
+.order-btn p {
+	position: relative;
+	width: 25%;
+	right: 15%;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #fff;
+	color: $brand__color;
+	border-color: $brand__color;
+	&:hover {
+		background: $brand__color;
+		border-color: $brand__color;
+		color: #fff;
+	}
+	&:active,
+	&:focus {
+		background: darken($brand__color, 20%);
+		border-color: darken($brand__color, 20%);
+	}
+}
