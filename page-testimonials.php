@@ -12,7 +12,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+	<div class="border-div">
 		<h1><?php the_title(); ?></h1>
 
 		<?php
@@ -39,7 +39,7 @@ get_header();
 					wp_reset_postdata();
 				}
 				?>
-
+	</div>
 	</main><!-- #main -->
 
 <?php

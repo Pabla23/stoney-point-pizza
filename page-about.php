@@ -18,7 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
 		
 		<section class="about-intro-section">
-
+		
 			<h1><?php the_title(); ?></h1>
 
 			<?php
@@ -28,7 +28,7 @@ get_header();
 			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn">Order Now</a>
 
 		</section>
-
+		<div class="border-div">
 		<section class="about-info-section">
 			<article>
 				<?php
@@ -155,7 +155,7 @@ get_header();
 			}
 			?>
 		</section>
-
+		</div>
 	</main><!-- #main -->
 
 <?php

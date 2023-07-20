@@ -1,11 +1,28 @@
+.page-header {
+    text-align: center;
+    margin: 2rem 0;
+
+}
 .site-main {
-    width: 80%;
+    display:flex;
+    flex-direction: column;
+}
+.border-div {
+    position: relative;
+    width: 90%;
     padding: 0 1.5rem;
     margin: 0 auto;
-    border-left: $brand__color solid 3px;
-    border-right: $brand__color solid 3px;
+    border-left: solid 3px $brand__color;
+    border-right: solid 3px $brand__color;
 }
-
+@media screen and (min-width: 1000px) {
+    .border-div {
+        position: relative;
+        width: 70%;
+        padding: 3rem;
+        margin: 0 auto;
+    }
+}
 .swiper-slide {
     margin: 0 auto;
     & p {
@@ -14,10 +31,3 @@
         margin: 0 auto;
     };
 }
-// @media screen and (min-width: 768px) {
-//     .custom-logo-link {
-//         width: 50%;
-//         margin: 0 auto;
-//     }
-// }
-    

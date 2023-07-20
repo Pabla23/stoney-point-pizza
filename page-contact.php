@@ -25,7 +25,7 @@ get_header();
 			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn"><p>Order Now</p></a>
 
 		</section>
-
+		<div class="border-div">
 		<section class="contact-map-section">
 			<h2>Quick Finder</h2>
 			<?php
@@ -100,7 +100,7 @@ get_header();
 			<a href="<?php echo get_post_type_archive_link( 'spp-testimonial' ); ?>"><p>Testimonial Archive</p></a>
 			<?php the_content(); ?>
 		</section>
-
+		</div>
 	</main><!-- #main -->
 
 <?php

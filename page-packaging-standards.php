@@ -31,7 +31,7 @@ get_header();
 			}
 			?>
 		</section>
-
+		<div class="border-div">
 		<?php
 		$sections = array( 'pizza_preparation', 'pizza_packaging', 'timely_and_professional_delivery');
 
@@ -96,7 +96,7 @@ get_header();
 			<?php
 		}
 		?>
-
+		</div>
 	</main><!-- #main -->
 
 <?php

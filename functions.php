@@ -195,7 +195,7 @@ add_action( 'wp_enqueue_scripts', 'stoney_point_scripts' );
 /**
  * Admin customization features
  */
-require get_template_directory() . '/inc/admin-customization.php';
+// require get_template_directory() . 'inc/admin-customization.php';
 
 /**
  * Implement the Custom Header feature.

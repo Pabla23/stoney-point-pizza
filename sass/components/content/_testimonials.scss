@@ -1,4 +1,11 @@
+.archive-main {
+    margin-bottom: 2rem;
+}
+
 .page-id-613 {
+    .site-main {
+        margin-bottom: 2rem;
+    }
     .testimonial-section {
         .wp-block-quote {
             padding: 1rem;
@@ -26,9 +33,9 @@
 @media (min-width: 800px) {
     .page-id-613 {
         .site-main {
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 800px 1fr;
+            // padding: 0;
+            // display: grid;
+            // grid-template-columns: 1fr 800px 1fr;
             h1 {
                 grid-column: 2;
             }

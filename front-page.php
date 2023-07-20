@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+	
 		<section class="home-intro-section">
 			<?php
 			the_post_thumbnail();
@@ -24,6 +24,7 @@ get_header();
 			?>
 			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn">Order Now</a>
 		</section>
+	<div class="border-div">
 
 		<section class="home-promotions-section">
 			<h2>Promotions</h2>
@@ -138,6 +139,7 @@ get_header();
 			}
 			?>
 		</section>
+	</div>
 	</main><!-- #main -->
 
 <?php

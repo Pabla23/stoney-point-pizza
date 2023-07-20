@@ -1,4 +1,9 @@
 .page-id-29 {
+    .site-main {
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-2.5rem);
+    }
     h2 {
         text-align: center;
     }
@@ -22,13 +27,15 @@
             background-color: #a00000;
         }
     }
+    .site-footer {
+        transform: translateY(2rem);
+    }
 }
 
 .about-intro-section {
     position: relative;
-    width: 100vw;
-    left: -1.5rem;
-    top: -2rem;
+    width: 100%;
+    object-fit: cover;
     &::before {
         content: "";
         position: absolute;
@@ -54,7 +61,6 @@
     img {
         display: block;
         width: 100%;
-        max-width: 400px;
         margin: 0 auto;
     }
 }
@@ -125,18 +131,20 @@
         }
         .site-main {
             padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 800px 1fr;
-            grid-template-rows: 800px repeat(4, minmax(300px, auto));
-            .about-info-section, .about-founders-section, .about-testimonial-section, .about-standards-section {
-                grid-column: 2;
-            }
+            display: flex;
+            flex-direction: column;
+            // display: grid;
+            // grid-template-columns: 1fr 800px 1fr;
+            // grid-template-rows: 800px repeat(4, minmax(300px, auto));
+            // .about-info-section, .about-founders-section, .about-testimonial-section, .about-standards-section {
+            //     grid-column: 2;
+            // }
         }
     }
 
     .about-intro-section {
-        grid-column: 1 / 5;
-        top: -20rem;
+        // grid-column: 1 / 5;
+        top: -2rem;
         left: 0;
         object-fit: cover;
         overflow: hidden;
@@ -180,7 +188,6 @@
 @media (min-width: 1200px) {
     .page-id-29 {
         .site-main {
-            grid-template-columns: 1fr 1000px 1fr;
         }
     }
 }
