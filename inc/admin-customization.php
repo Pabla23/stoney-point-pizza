@@ -17,8 +17,8 @@
   *
   */
 
- //// Replaces the WordPress logo with your own custom logo
- //// Note: you must add your own logo to an "images" folder within your theme. Adjust CSS values accordingly
+ // Replaces the WordPress logo with your own custom logo
+ // Note: you must add your own logo to an "images" folder within your theme. Adjust CSS values accordingly
  function spp_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
@@ -31,26 +31,26 @@
         }
     </style>
 <?php }
-// add_action( 'login_enqueue_scripts', 'spp_login_logo' );
+add_action( 'login_enqueue_scripts', 'spp_login_logo' );
 
 
-//// Changes the logo link so that it points to your site, instead of wordpress.org
-// function spp_login_logo_url() {
-//     return home_url();
-// }
-// add_filter( 'login_headerurl', 'spp_login_logo_url' );
+// Changes the logo link so that it points to your site, instead of wordpress.org
+function spp_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'spp_login_logo_url' );
 
-// function spp_login_logo_url_title() {
-//     return 'Stoney Point Pizza - Home';
-// }
-// add_filter( 'login_headertext', 'spp_login_logo_url_title' );
+function spp_login_logo_url_title() {
+    return 'Stoney Point Pizza - Home';
+}
+add_filter( 'login_headertext', 'spp_login_logo_url_title' );
 
 
-//// Links your own custom CSS stylesheet for the login page
-// function spp_login_stylesheet() {
-//     wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/style-login.css' );
-// }
-// add_action( 'login_enqueue_scripts', 'spp_login_stylesheet' );
+// Links your own custom CSS stylesheet for the login page
+function spp_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/css/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'spp_login_stylesheet' );
 
 
  /**

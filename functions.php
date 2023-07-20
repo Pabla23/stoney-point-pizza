@@ -195,7 +195,7 @@ add_action( 'wp_enqueue_scripts', 'stoney_point_scripts' );
 /**
  * Admin customization features
  */
-// require get_template_directory() . 'inc/admin-customization.php';
+require get_template_directory() . '/inc/admin-customization.php';
 
 /**
  * Implement the Custom Header feature.
@@ -277,16 +277,12 @@ function woocommerce_template_loop_product_title() {
 	echo '<h3 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h3>';
 }
 
-//  my version because of the previous error
+// change product loop image size
 function woocommerce_template_loop_product_thumbnail() {
 	global $product;
 
 	echo $product->get_image('medium');
 }
-
-
-
-
 
 // change product bundle image size... code copied from plugin template then adjusted
 function custom_woocommerce_bundled_product_image_html($html, $product_id, $bundled_item) {

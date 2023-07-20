@@ -69,6 +69,7 @@
 .home-promotions-section {
     .swiper {
         text-align: center;
+        overflow-y: visible;
     }
     .swiper-button-prev, .swiper-button-next {
         display: none;
@@ -77,7 +78,7 @@
         margin: 4rem 0 2rem;
     }
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 0;
+        bottom: -1.5rem;
         top: initial;
     }
 }
