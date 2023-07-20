@@ -1,6 +1,6 @@
-// Make the page responsive for all screen sizes ( <=320 px; <=360px; <=480 px; <= 640 px ; <= 960 ; >= 1008px  )
+// page responsive for all screen sizes ( <=320 px; <=360px; <=480 px; <= 640 px ; <= 960 ; >= 1008px  )
 
-// <body class="page-template-default page page-id-31 wp-custom-logo theme-stoney-point woocommerce-js woocommerce-active"><script id="__bs_script__">
+<body class="page-template-default page page-id-31 wp-custom-logo theme-stoney-point woocommerce-js woocommerce-active"><script id="__bs_script__">
 
 
 <main id="primary" class="site-main">
