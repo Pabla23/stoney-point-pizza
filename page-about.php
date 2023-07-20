@@ -16,14 +16,16 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
-		<h1><?php the_title(); ?></h1>
 		
 		<section class="about-intro-section">
 
+			<h1><?php the_title(); ?></h1>
+
 			<?php
-			the_post_thumbnail( 'feature-home' );
+			the_post_thumbnail();
 			?>
+
+			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn">Order Now</a>
 
 		</section>
 
@@ -75,8 +77,6 @@ get_header();
 				}
 				?>
 			</article>
-
-			<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn"><p>Order Now</p></a>
 		</section>
 
 		<section class="about-founders-section">
@@ -84,11 +84,14 @@ get_header();
 			<?php
 			if( have_rows( 'owner_bios' ) ) {
 				while( have_rows( 'owner_bios' ) ) : the_row();
-
-					echo wp_get_attachment_image( get_sub_field( 'owner_picture' ), 'info-about');
-					?>
-					<h3><?php echo get_sub_field( 'owner_name' ); ?></h3>
-					<p><?php echo get_sub_field( 'owner_description' ); ?></p>
+				?>
+					<div class="bio">
+						<h3><?php echo get_sub_field( 'owner_name' ); ?></h3>
+						<?php
+						echo wp_get_attachment_image( get_sub_field( 'owner_picture' ), 'info-about');
+						?>
+						<p><?php echo get_sub_field( 'owner_description' ); ?></p>
+					</div>
 					<?php
 				endwhile;
 			}
@@ -124,7 +127,7 @@ get_header();
 			if( function_exists( 'get_field' ) ) {
 				if( get_field( 'link_to_testimonials' ) ) {
 					?>
-					<a href="<?php the_field( 'link_to_testimonials' ); ?>" class="testimonial-page-btn btn"><p>Read More</p></a>
+					<a href="<?php the_field( 'link_to_testimonials' ); ?>" class="testimonial-page-btn btn">Read More</a>
 					<?php
 				}
 			}
@@ -146,7 +149,7 @@ get_header();
 				}
 				if( get_field('link_to_standards') ) {
 					?>
-					<a href="<?php the_field( 'link_to_standards' ); ?>" class="standards-page-btn btn"><p>Read More</p></a>
+					<a href="<?php the_field( 'link_to_standards' ); ?>" class="standards-page-btn btn">Read More</a>
 					<?php
 				}
 			}

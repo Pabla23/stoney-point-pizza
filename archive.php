@@ -16,9 +16,10 @@ get_header();
 
 			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+					$archive_title = get_the_archive_title();
+					$archive_title = str_replace('Archives: ', '', $archive_title);
 				?>
+				<h1><?php echo $archive_title; ?></h1>
 			</header><!-- .page-header -->
 
 			<?php
@@ -47,5 +48,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
