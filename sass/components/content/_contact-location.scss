@@ -21,6 +21,136 @@
 
 
 
+
+
+    
+  // added styles for <h1>Contact and Locations</h1> and <article id="post-31" class="post-31 page type-page status-publish hentry">
+  h1, .entry-title {
+    text-align: center;
+    color: #800000;
+    font-size: 2rem;
+  }
+  
+  // .entry-title {
+  //   text-align: center;
+  //   color: #800000;
+  //   font-size: 2rem;
+  // }
+
+  #post-31 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+  }
+
+  .entry-header {
+    border-bottom: 1px solid #800000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .entry-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+  }
+
+  .entry-content {
+    text-align: justify;
+    color: #800000;
+    font-size: 1rem;
+  }
+
+  /* Styling for screens (max-width: 320px) */
+  @media screen and (max-width: 320px) { 
+    h1, .entry-title, .entry-content {
+      font-size: 0.875rem;
+    }
+  }
+
+  /*  styling for screens (min-width: 321px) and (max-width: 360px) */
+  @media screen and (min-width: 321px) and (max-width: 360px) {
+    h1, .entry-title {
+      font-size: 1.6em;
+    }
+    #post-31 {
+      padding: 10px;
+    }
+  }
+
+  /*  styling for screens (min-width: 361px) and (max-width: 480px) */
+  @media screen and (min-width: 361px) and (max-width: 480px) {
+    h1, .entry-title {
+        font-size: 1.8em;
+    }
+    #post-31 {
+        padding: 15px;
+    }
+  }
+
+  /*  styling for screens (min-width: 481px) and (max-width: 640px) */
+  @media screen and (min-width: 481px) and (max-width: 640px) {
+    h1, .entry-title {
+        font-size: 2em;
+    }
+    #post-31 {
+        padding: 20px;
+    }
+  }
+
+  /* styling for screens 641px to 960px */
+  @media screen and (min-width: 641px) and (max-width: 960px) {
+    h1, .entry-title {
+        font-size: 2.2em;
+    }
+    #post-31 {
+        padding: 25px;
+    }
+  }
+
+  /* styling for screens 961px to 1008px */
+  @media screen and (min-width: 961px) and (max-width: 1008px) {
+    h1, .entry-title {
+        font-size: 2.4em;
+    }
+    #post-31 {
+        padding: 30px;
+    }
+  }
+
+  /* styling for screens larger than 1009px */
+  @media screen and (min-width: 1009px) {
+    h1, .entry-title {
+        font-size: 2.6em;
+    }
+    #post-31 {
+        padding: 35px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // <section class="contact-intro-section">
   /* Common Styling */
   .contact-intro-section {
@@ -28,7 +158,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    // height: 25vh;
+    min-height: 25vh;
+  }
+
+  .contact-form-section {
+    width: 100%;
+    max-width: 100%;
+    form {
+      label, span, input {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 
   .contact-intro-section{
@@ -62,6 +204,7 @@
       letter-spacing: 0.5px;
       margin: 0;     
     }
+  }
 
     /* Styling for screens (max-width: 320px) */
     @media screen and (max-width: 320px) { 
@@ -130,19 +273,62 @@
         max-width: 25%;
       }
 
+      .contact-form-section {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
-
   }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   // <section class="contact-map-section">
   .contact-map-section {
-    // border-top: 2px solid #800000;
-    // padding: 20px 0;
-    // gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 25vh;
+    min-height: 25vh;
   }
+
+  /*  styling for screens (max-width: 320px) */
+  @media screen and (max-width: 320px) { }
+
+  /*  styling for screens (min-width: 321px) and (max-width: 360px) */
+  @media screen and (min-width: 321px) and (max-width: 360px) { }
+
+  /*  styling for screens (min-width: 361px) and (max-width: 480px) */
+  @media screen and (min-width: 361px) and (max-width: 480px) { }
+
+  /*  styling for screens (min-width: 481px) and (max-width: 640px) */
+  @media screen and (min-width: 481px) and (max-width: 640px) { }
+
+  /* styling for screens 641px to 960px */
+  @media screen and (min-width: 641px) and (max-width: 960px) { }
+
+  /* styling for screens 961px to 1008px */
+  @media screen and (min-width: 961px) and (max-width: 1008px) { }
+
+  /*  styling for screens larger than 1009px */
+  @media screen and (min-width: 1009px) { }
+
+
+
+
+
 
 
 
@@ -223,9 +409,6 @@
     color: #800000; 
   }
 
-
-
-
   /*  styling for screens (max-width: 320px) */
   @media screen and (max-width: 320px) {
 
@@ -235,7 +418,6 @@
 
     .contact-locations-section article a {    }
   }
-
 
   /*  styling for screens (min-width: 321px) and (max-width: 360px) */
   @media screen and (min-width: 321px) and (max-width: 360px) {
@@ -247,7 +429,6 @@
     .contact-locations-section article a {   }
   
   }
-
 
   /*  styling for screens (min-width: 361px) and (max-width: 480px) */
   @media screen and (min-width: 361px) and (max-width: 480px) {
@@ -305,7 +486,6 @@
 
   }
 
-
   /*  styling for screens larger than 1009px */
   @media screen and (min-width: 1009px) {
 
@@ -315,7 +495,7 @@
       align-items: start;
       flex-wrap: wrap;
     }
-  
+
     .contact-locations-section article {
       width: 45%;
       margin-bottom: 0;
@@ -324,7 +504,7 @@
   }
 
  
-
+}
   
 
 
@@ -357,14 +537,35 @@
   }
 
 
+  /*  styling for screens (max-width: 320px) */
+  @media screen and (max-width: 320px) { }
+
+
+  /*  styling for screens (min-width: 321px) and (max-width: 360px) */
+  @media screen and (min-width: 321px) and (max-width: 360px) { }
+
+
+  /*  styling for screens (min-width: 361px) and (max-width: 480px) */
+  @media screen and (min-width: 361px) and (max-width: 480px) { }
+
+
+  /*  styling for screens (min-width: 481px) and (max-width: 640px) */
+  @media screen and (min-width: 481px) and (max-width: 640px) { }
+
+
+  /* styling for screens 641px to 960px */
+  @media screen and (min-width: 641px) and (max-width: 960px) { }
+
+
+  /* styling for screens 961px to 1008px */
+  @media screen and (min-width: 961px) and (max-width: 1008px) { }
+
+
+  /*  styling for screens larger than 1009px */
+  @media screen and (min-width: 1009px) { }
 
 
 
   
 
     
-}
-
-
-
-
