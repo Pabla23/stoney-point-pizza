@@ -26,7 +26,7 @@
 
 .home-intro-section {
     position: relative;
-    height: 45rem;
+    height: 46rem;
     &::before {
         content: "";
         position: absolute;
@@ -50,7 +50,7 @@
     }
     .wp-post-image {
         position: absolute;
-        height: 45rem;
+        height: 46rem;
         left: 0;
         right: 0;
         object-fit: cover;
@@ -79,6 +79,7 @@
         display: none;
     }
     .rand-testimonial {
+        text-align: center;
         margin: 4rem 0 2rem;
     }
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -131,23 +132,18 @@
             .home-about-section,.home-features-section, .home-promotions-section {
                 grid-column: 2;
             }
-            // .home-intro-section {
-            //     grid-column: 1 / 5;
-            //     top: -4rem;
-            //     left: 0;
-            //     width: 100%;
-            //     .custom-logo-link {
-            //         img {
-            //             max-width: 20rem;
-            //             max-height: 20rem;
-            //         }
-            //     }
-            //     .order-btn {
-            //         top: 70%;
-            //         font-size: 1.2rem;
-            //         padding: 0.8rem 1.2rem;
-            //         max-width: 136px;
-            //     }
+            .home-intro-section {
+                .custom-logo-link {
+                    img {
+                        max-width: 20rem;
+                        max-height: 20rem;
+                    }
+                }
+                .order-btn {
+                    font-size: 1.2rem;
+                    padding: 0.8rem 1.2rem;
+                    max-width: 136px;
+                }
             // }
             // .home-promotions-section {
             //     max-width: 700px;
@@ -162,4 +158,5 @@
             // }
         }
     }
+}
 }

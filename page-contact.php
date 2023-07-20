@@ -29,18 +29,27 @@ get_header();
 		<section class="contact-map-section">
 			<h2>Quick Finder</h2>
 			<?php
-			if( function_exists( 'get_field' ) ) {
-				if( get_field( 'google_map_stoney' ) ) {
-					//output google map
-					$location = get_field( 'google_map_stoney' );
-					?>
-					<div class="acf-map">
-						<div class="marker" data-lat="<?php echo esc_attr( $location['lat'] ); ?>" data-lng="<?php echo esc_attr( $location['lng'] ); ?>"></div>
-					</div>
-					<?php
-				}
-			}
-			?>
+			if (have_rows('contact_map')) :
+				?>
+				<div class="acf-map">
+					<?php while (have_rows('contact_map')) : the_row();
+						$location = get_sub_field('location');
+						$map_icon = get_sub_field('icon'); //custom marker icon 
+						?>
+						<div class="marker" 
+							data-lat="<?php echo $location['lat']; ?>" 
+							data-lng="<?php echo $location['lng']; ?>" 
+							data-icon="<?php echo $map_icon //custom marker icon 
+							; 
+						?>">
+								<h4><?php the_sub_field('title'); ?></h4>
+								<p><?php the_sub_field('address'); ?></p>
+								<p><?php the_sub_field('description'); ?></p>
+						</div>
+					<?php endwhile; ?>
+				</div>
+			<?php
+			endif; ?>
 		</section>
 
 		<section class="contact-locations-section">
@@ -64,7 +73,7 @@ get_header();
 						<article>
 
 							<h3><?php the_title(); ?></h3>
-							<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn"><p>Order</p></a>
+							<a href="<?php echo esc_url( get_permalink( 14 ) ); ?>" class="order-btn btn">Order</a>
 
 							<?php
 							if( get_field( 'restaurant_address' ) ) {
@@ -79,8 +88,6 @@ get_header();
 								<?php
 							}
 							?>
-
-							<a href="<?php echo esc_url( get_permalink( 99 ) ); ?>"><p>Menu</p></a>
 
 							<?php
 							if( get_field( 'opening_hours' ) ) {
@@ -103,7 +110,6 @@ get_header();
 
 		<section class="contact-form-section">
 			<h2>Contact Us</h2>
-			<a href="<?php echo get_post_type_archive_link( 'spp-testimonial' ); ?>"><p>Testimonial Archive</p></a>
 			<?php the_content(); ?>
 		</section>
 		</div>

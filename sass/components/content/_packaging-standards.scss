@@ -19,11 +19,8 @@
     font-size: 1rem;
     line-height: 2.5;
     padding: 0.1rem 0.5rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     border: 5px solid #800000;
-    font-weight: bold;
-    cursor: pointer;
     width: 100%;
     text-align: center;
     outline: none;
@@ -31,7 +28,6 @@
   }
 
   .standards-intro-section p {
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     margin: 0;
   }
@@ -39,6 +35,14 @@
   .standards-intro-section p:first-child,
   .standards-intro-section p:last-child {
     margin-bottom: 0;
+  }
+
+  .standards-page-btn {
+    background-color: #600000;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-decoration: none;
   }
 
   /*  styling for screens (max-width: 320px) */
@@ -80,7 +84,6 @@
   /* styling for screens 641px to 960px */
   @media screen and (min-width: 641px) and (max-width: 960px) {
     .standards-intro-section {
-      font-size: 1.25rem;
       padding: 30px;
       width: 80%;
     }
@@ -89,7 +92,6 @@
   /* styling for screens 961px to 1008px */
   @media screen and (min-width: 961px) and (max-width: 1008px) {
     .standards-intro-section {
-      font-size: 1.375rem;
       padding: 35px;
       width: 80%;
     }
@@ -98,7 +100,7 @@
   /* styling for screens larger than 1009px */
   @media screen and (min-width: 1009px) {
     .standards-intro-section {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       padding: 40px;
       width: 80%;
     }
@@ -149,7 +151,6 @@
   section p {
     // color: #800000;
     color: black;
-    font-size: 1em;
     margin-bottom: 10px;
   }
 
@@ -189,7 +190,6 @@
   /* styling for screens 641px to 960px */
   @media screen and (min-width: 641px) and (max-width: 960px) {
     section {
-      font-size: 1.25rem;
       padding: 30px;
     }
   }
@@ -197,7 +197,6 @@
   /* styling for screens 961px to 1008px */
   @media screen and (min-width: 961px) and (max-width: 1008px) {
     section {
-      font-size: 1.375rem;
       padding: 35px;
     }
   }
@@ -205,8 +204,8 @@
   /* styling for screens larger than 1009px */
   @media screen and (min-width: 1009px) {
     section {
-      font-size: 1.5rem;
       padding: 40px;
+      font-size: 1.125rem;
     }
   }
 

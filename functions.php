@@ -312,3 +312,33 @@ function custom_woocommerce_bundled_product_image_html($html, $product_id, $bund
 	return $html;
 }
 add_filter( 'woocommerce_bundled_product_image_html', 'custom_woocommerce_bundled_product_image_html', 10, 3 );
+
+/**
+ * ENQUEUE SCRIPT FOR GOOGLE MAP
+ */
+function spp_project_scripts() {
+
+    if ( is_page(31)) {
+		wp_enqueue_script( 'custom-map', get_template_directory_uri() . '/js/custom-map.js', array( 'jquery' ), '1.0', true );
+		
+		wp_enqueue_script(
+			'google-maps-api',
+			'https://maps.googleapis.com/maps/api/js?key=AIzaSyCBUzgsqiY1afkHDyj99TOzzlhvFRBoemg&callback=Function.prototype',
+			array(),
+			null,
+			true
+		);
+	}
+}
+add_action( 'wp_enqueue_scripts', 'spp_project_scripts' );
+
+
+/**
+ * Register ACF Google Map API Key
+ */
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyCBUzgsqiY1afkHDyj99TOzzlhvFRBoemg');
+}
+
+add_action('acf/init', 'my_acf_init');

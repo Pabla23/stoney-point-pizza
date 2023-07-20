@@ -35,6 +35,16 @@ ul.products {
         color: #600000;
         font-weight: bold;
         cursor: pointer;
+
+        &:hover {
+            background-color: #882b2b;
+            color: #fff;
+        }
+
+        &:focus {
+            background-color: #882b2b;
+            color: #fff;
+        }
     }
 
     .selected {
@@ -194,6 +204,7 @@ ul.products {
             justify-content: center;
             button {
                 margin: 0.5rem;
+                font-size: 1.1rem;
             }
         }
 
