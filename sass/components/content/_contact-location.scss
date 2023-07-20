@@ -22,6 +22,15 @@
 
 
   // <section class="contact-intro-section">
+  /* Common Styling */
+  .contact-intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
   .contact-intro-section{
 
     .order-btn {
@@ -52,6 +61,75 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin: 0;     
+    }
+
+    /* Styling for screens (max-width: 320px) */
+    @media screen and (max-width: 320px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 0.875rem;
+      }
+    }
+
+    /* Styling for screens (min-width: 321px) and (max-width: 360px) */
+    @media screen and (min-width: 321px) and (max-width: 360px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 0.9375rem;
+      }
+    }
+
+    /* Styling for screens (min-width: 361px) and (max-width: 480px) */
+    @media screen and (min-width: 361px) and (max-width: 480px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 1rem;
+      }
+    }
+
+    /* Styling for screens (min-width: 481px) and (max-width: 640px) */
+    @media screen and (min-width: 481px) and (max-width: 640px) {
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 1.125rem;
+      }
+
+      .order-btn{
+        max-width: 50%;
+      }
+
+    }
+
+    /* Styling for screens 641px to 960px */
+    @media screen and (min-width: 641px) and (max-width: 960px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 1.25rem;
+      }
+
+      .order-btn{
+        max-width: 50%;
+      }
+
+    }
+
+    /* Styling for screens 961px to 1008px */
+    @media screen and (min-width: 961px) and (max-width: 1008px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 1.375rem;
+      }
+
+      .order-btn{
+        max-width: 25%;
+      }
+
+    }
+
+    /*  Styling for screens larger than 1009px */
+    @media screen and (min-width: 1009px) { 
+      .contact-intro-section p, .contact-intro-section a {
+        font-size: 1.5rem;
+      }
+
+      .order-btn{
+        max-width: 25%;
+      }
+
     }
 
 
