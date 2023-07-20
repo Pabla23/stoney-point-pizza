@@ -1,3 +1,50 @@
 .site-footer {
-    background-color: lightblue;
+    background-color: $colour-spp-red;
+    color: white;
+
+    margin: 0;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    .footer-menus {
+        
+        nav div ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+
+                a,
+                a:visited {
+                    color: white;
+
+                }
+
+                a:hover,
+                a:active,
+                a:focus {
+                    color: #fc964e;
+                }
+            }
+
+            &#menu-footer-socials {
+                display: flex;
+                gap: 1rem;
+
+                li {
+
+                    a {
+
+                        svg {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
