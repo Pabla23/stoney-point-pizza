@@ -1,0 +1,292 @@
+.page-id-31 {
+  .site-main {
+    padding: 0 1.5rem;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    color: #333;
+  }
+
+  section {
+    border-top: 2px solid #800000;
+    padding: 20px 0;
+  }
+
+
+
+
+
+  // <section class="contact-intro-section">
+  .contact-intro-section{
+
+    .order-btn {
+      font-size: 1rem;
+      line-height: 2.5;
+      padding: 0.1rem 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 5px solid #800000;
+      border-radius: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: transparent;
+      color: #800000;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+  
+    .order-btn:hover, .order-btn:focus {
+      background-color: #800000;
+      color: white;
+      outline: none;
+    }
+  
+    .order-btn p {
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0;     
+    }
+
+
+  }
+
+
+
+  // <section class="contact-map-section">
+  .contact-map-section {
+    // border-top: 2px solid #800000;
+    // padding: 20px 0;
+    // gap: 2rem;
+  }
+
+
+
+
+
+
+
+
+  // <section class="contact-locations-section">
+  .contact-locations-section {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-locations-section h2 {
+    width: 100%;
+  }
+
+  .contact-locations-section article {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px; 
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .contact-locations-section a {
+    color: #800000; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    border-radius: 5px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+
+  .contact-locations-section {
+
+    .order-btn {
+      height: auto;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .order-btn {
+      display: inline-block;
+      background-color:  white;
+      color: #800000; 
+      padding: 14px 20px; 
+      text-align: center;
+      text-decoration: none; 
+      font-size: 16px; 
+      margin: 4px 2px; 
+      cursor: pointer; 
+      border-radius: 8px; 
+      border: none; 
+      // border: 2px solid #800000;
+    }
+  
+    .order-btn {
+      transition-duration: 0.4s; 
+    }
+  
+    .order-btn:hover {
+      background-color: #800000;
+      color: white; 
+    }
+
+  } 
+
+  .contact-locations-section p {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .contact-locations-section a[href*="menu"]:hover::after {
+    content: " \2192"; /* Add a right arrow after "menu". */ 
+    color: #800000; 
+  }
+
+
+
+
+  /*  styling for screens (max-width: 320px) */
+  @media screen and (max-width: 320px) {
+
+    .contact-locations-section {  }
+
+    .contact-locations-section article { }
+
+    .contact-locations-section article a {    }
+  }
+
+
+  /*  styling for screens (min-width: 321px) and (max-width: 360px) */
+  @media screen and (min-width: 321px) and (max-width: 360px) {
+
+    .contact-locations-section { }
+
+    .contact-locations-section article { }
+
+    .contact-locations-section article a {   }
+  
+  }
+
+
+  /*  styling for screens (min-width: 361px) and (max-width: 480px) */
+  @media screen and (min-width: 361px) and (max-width: 480px) {
+
+    .contact-locations-section { }
+
+    .contact-locations-section article {  }
+
+    .contact-locations-section article a {  }
+  
+  }
+
+  /*  styling for screens (min-width: 481px) and (max-width: 640px) */
+  @media screen and (min-width: 481px) and (max-width: 640px) {
+
+    .contact-locations-section { }
+
+    .contact-locations-section article { }
+
+    .contact-locations-section article a { }
+  
+  }
+
+  /* styling for screens 641px to 960px */
+  @media screen and (min-width: 641px) and (max-width: 960px) {
+
+    .contact-locations-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+  
+    .contact-locations-section article {
+      width: 45%; 
+      margin-bottom: 0;
+    }
+
+  }
+
+  /* styling for screens 961px to 1008px */
+  @media screen and (min-width: 961px) and (max-width: 1008px) {
+
+    .contact-locations-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+  
+    .contact-locations-section article {
+      width: 45%; 
+      margin-bottom: 0;
+    }
+
+  }
+
+
+  /*  styling for screens larger than 1009px */
+  @media screen and (min-width: 1009px) {
+
+    .contact-locations-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+  
+    .contact-locations-section article {
+      width: 45%;
+      margin-bottom: 0;
+    }
+
+  }
+
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // <section class="contact-form-section">
+  .contact-locations-section{
+    // border-top: 2px solid #800000;
+    // padding: 20px 0;
+    // gap: 2rem;
+  }
+
+
+
+
+
+  
+
+    
+}
+
+
+
+
