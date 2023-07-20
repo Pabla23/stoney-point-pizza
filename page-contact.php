@@ -29,11 +29,17 @@ get_header();
 		<section class="contact-map-section">
 			<h2>Quick Finder</h2>
 			<?php
-			// if( function_exists( 'get_field' ) ) {
-			// 	if( get_field( 'google_map_stoney' ) ) {
-
-			// 	}
-			// }
+			if( function_exists( 'get_field' ) ) {
+				if( get_field( 'google_map_stoney' ) ) {
+					//output google map
+					$location = get_field( 'google_map_stoney' );
+					?>
+					<div class="acf-map">
+						<div class="marker" data-lat="<?php echo esc_attr( $location['lat'] ); ?>" data-lng="<?php echo esc_attr( $location['lng'] ); ?>"></div>
+					</div>
+					<?php
+				}
+			}
 			?>
 		</section>
 
