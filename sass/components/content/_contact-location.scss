@@ -18,17 +18,21 @@
     padding: 20px 0;
   }
 
+  .acf-map {
+    width: 100%;
+    height: 400px;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+  }
 
+  // Fixes potential theme css conflict.
+  .acf-map img {
+    max-width: inherit !important;
+  }
 
-
-
-
-
-    
   // added styles for <h1>Contact and Locations</h1> and <article id="post-31" class="post-31 page type-page status-publish hentry">
   h1, .entry-title {
     text-align: center;
-    color: #800000;
     font-size: 2rem;
   }
   
@@ -135,22 +139,6 @@
         padding: 35px;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // <section class="contact-intro-section">
   /* Common Styling */
@@ -531,11 +519,11 @@
 
 
   // <section class="contact-form-section">
-  .contact-locations-section{
+  // .contact-locations-section{
     // border-top: 2px solid #800000;
     // padding: 20px 0;
     // gap: 2rem;
-  }
+  // }
 
 
   /*  styling for screens (max-width: 320px) */

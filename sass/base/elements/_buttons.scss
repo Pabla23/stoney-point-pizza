@@ -5,12 +5,14 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: $brand__color;
 	border-radius: 25px;
+	color: $color__background-body;
 	background: $brand__color;
-	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -25,15 +27,6 @@ input[type="submit"] {
 	
 	position: relative;
 	text-decoration: none;
-	
-}
-.order-btn p {
-	padding: 0.5rem;
-	position: relative;
-	width: 100%;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
 	font-weight: bold;
-	
+
 }

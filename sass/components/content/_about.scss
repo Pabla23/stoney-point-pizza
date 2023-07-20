@@ -151,7 +151,7 @@
         height: 65rem;
         h1 {
             font-size: 4rem;
-            top: 50%;
+            top: 28%;
             left: 50%;
         }
         &::before {
@@ -160,7 +160,7 @@
         .order-btn {
             font-size: 1.2rem;
             padding: 0.8rem 1.2rem;
-            top: 70%;
+            top: 54%;
         }
     }
 
@@ -181,13 +181,6 @@
             blockquote {
                 width: 250px;
             }
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    .page-id-29 {
-        .site-main {
         }
     }
 }

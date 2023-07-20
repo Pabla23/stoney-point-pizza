@@ -70,31 +70,32 @@ get_header();
 				}
 				?>
 			</section>
-
-			<section class="standards-conclusion-section">
-				<?php
-				if( function_exists( 'get_field' ) ) {
-
-					?>
-					<h2>Your Feedback</h2>
-					<?php
-
-					if( get_field( 'packaging_&_standards_conclusion' ) ) {
-						?>
-						<p><?php the_field( 'packaging_&_standards_conclusion' ); ?></p>
-						<?php
-					}
-
-					if ( get_field( 'link_to_location_contact' ) ) {
-						?>
-						<a href="<?php the_field( 'link_to_location_contact' ); ?>" class="standards-page-btn btn"><p>Contact Us</p></a>
-						<?php
-					}
-				}
-				?>
-			</section>
+			<?php }
+		?>
+		
+		<section class="standards-conclusion-section">
 			<?php
-		}
+			if( function_exists( 'get_field' ) ) {
+
+				?>
+				<h2>Your Feedback</h2>
+				<?php
+
+				if( get_field( 'packaging_&_standards_conclusion' ) ) {
+					?>
+					<p><?php the_field( 'packaging_&_standards_conclusion' ); ?></p>
+					<?php
+				}
+
+				if ( get_field( 'link_to_location_contact' ) ) {
+					?>
+					<a href="<?php the_field( 'link_to_location_contact' ); ?>" class="standards-page-btn btn">Contact Us</a>
+					<?php
+				}
+			}
+			?>
+		</section>
+		<?php
 		?>
 		</div>
 	</main><!-- #main -->

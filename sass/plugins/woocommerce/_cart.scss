@@ -3,6 +3,22 @@
         padding: 0 1.5rem;
     }
 
+    .return-to-shop {
+        margin: 2.5rem 0;
+        text-align: center;
+        a {
+            width: 100%;
+            margin: 2rem 0;
+            background-color: #600000;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.6rem;
+            cursor: pointer;
+        }
+    }
+
     .entry-header {
         text-align: center;
     }
