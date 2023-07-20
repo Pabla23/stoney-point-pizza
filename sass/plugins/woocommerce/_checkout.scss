@@ -19,3 +19,241 @@
 		}
 	}
 }
+
+// CUSTOM CHECKOUT CODE 
+
+.woocommerce-NoticeGroup-checkout, .woocommerce-NoticeGroup-updateOrderReview {
+	margin: 0;
+	ul {
+		margin: 0;
+		border: none;
+		background-color: transparent;
+		li {
+			list-style: none;
+			background-color: #F3E9E4;
+			border: 3px solid #600000;
+			border-radius: 1rem;
+			padding: 1rem;
+		}
+	}
+}
+
+.woocommerce-checkout {
+
+	.entry-title {
+		text-align: center;
+	}
+
+	.site-main {
+		padding: 0 1.5rem;
+	}
+
+	.woocommerce-billing-fields, .woocommerce-shipping-fields {
+		h3 {
+			text-align: center;
+		}
+
+		.form-row {
+			label {
+				display: block;
+			}
+		}
+
+		.address-field, .validate-email {
+			span {
+				input {
+					width: 100%;
+				}
+			}
+		}
+
+		.validate-postcode {
+			span {
+				input {
+					width: initial;
+				}
+			}
+		}
+	}
+
+	.checkout_coupon {
+		p {
+			text-align: center;
+			input[name="coupon_code"] {
+				display: block;
+				margin: 0 auto;
+				padding: 0.2rem;
+				border: 2px solid #600000;
+				color: #600000;
+			}
+			button {
+				margin: 1rem auto;
+				display: block;
+				background-color: #600000;
+				color: #fff;
+				border: none;
+				padding: 0.6rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.woocommerce-checkout-review-order {
+		.shop_table {
+			thead, tbody, tfoot {
+				display: block;
+				width: calc(100vw - 3rem);
+			}
+			thead {
+				tr {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+			tbody {
+				margin: 0 0 4rem;
+			}
+			tfoot {
+				tr {
+					margin-bottom: 1rem;
+					display: flex;
+					justify-content: space-between;
+				}
+				.woocommerce-shipping-totals {
+					ul {
+						margin: 0 0 0 0.5rem;
+						padding: 0;
+						li {
+							list-style: none;
+							margin: 0.3rem 0;
+							padding: 0;
+							font-size: 0.8rem;
+						}
+					}
+				}
+			}
+			tr.cart_item {
+				display: flex;
+				justify-content: space-between;
+				width: calc(100vw - 3rem);
+				td {
+					padding: 1rem 0;
+				}
+				.product-total {
+					font-weight: bold;
+				}
+				.variation {
+                    font-size: 0.8rem;
+                    margin: 1rem 0 0;
+                    padding: 0 0 0 1rem;
+					display: flex;
+					flex-wrap: wrap;
+                    dt {
+                        display: none;
+                    }
+                    dd {
+                        margin: 0;
+                        height: fit-content;
+                        margin-inline-start: 0;
+						width: 50%;
+						padding: 0 0.3rem;
+                        p {
+                            margin: 0;
+                        }
+                    }
+				}
+			}
+			tr.bundled_table_item {
+				.product-name {
+					padding: 0.5rem 0;
+				}
+			}
+		}
+
+		.woocommerce-checkout-payment {
+			ul {
+				margin: 0;
+				padding: 0;
+				li {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					font-size: 0.8rem;
+				}
+			}
+
+			.place-order {
+				margin: 1rem 0;
+			}
+
+			fieldset {
+				border: none;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+
+			.place-order {
+				button {
+					background-color: #600000;
+					color: #fff;
+					border: none;
+					padding: 0.6rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.woocommerce-checkout {
+
+		.site-main {
+			display: grid;
+			grid-template-columns: 1fr 1000px 1fr;
+			.post-16 {
+				grid-column: 2;
+				
+			}
+		}
+
+		// RESET WIDTHS
+		.woocommerce-checkout-review-order .shop_table tr.cart_item {
+			width: 100%;
+		}
+
+		.woocommerce-checkout-review-order .shop_table {
+			thead {
+				width: 100%;
+			}
+			tbody {
+				width: 100%;
+			}
+			tfoot {
+				width: 100%;
+			}
+		}
+
+		form.woocommerce-checkout {
+			display: grid;
+			grid-template-columns: 1fr 600px 400px 1fr;
+			.col2-set {
+				grid-column: 2;
+				grid-row: 2;
+				padding-right: 3rem;
+			}
+			h3 {
+				grid-column: 3;
+				grid-row: -1;
+				text-align: center;
+			}
+			.woocommerce-checkout-review-order {
+				grid-column: 3;
+				grid-row: 2;
+			}
+			.wc_coupon_message_wrap {
+				grid-column: 2;
+			}
+		}
+	}
+}

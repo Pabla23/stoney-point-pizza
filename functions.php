@@ -304,3 +304,11 @@ function custom_woocommerce_bundled_product_image_html($html, $product_id, $bund
     return $html;
 }
 add_filter( 'woocommerce_bundled_product_image_html', 'custom_woocommerce_bundled_product_image_html', 10, 3 );
+
+// change product image size from thubmnail to medium in the cart
+function custom_woocommerce_cart_item_thumbnail( $product_get_image, $cart_item, $cart_item_key ) {
+	$product = $cart_item['data'];
+	$image = $product->get_image( 'medium' );
+	return $image;
+}
+add_filter( 'woocommerce_cart_item_thumbnail', 'custom_woocommerce_cart_item_thumbnail', 10, 3 );
