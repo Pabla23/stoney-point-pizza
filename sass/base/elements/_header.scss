@@ -59,14 +59,15 @@
                 margin: 1rem 0;
 
                 li {
-
+                    text-decoration: none;
                     margin-bottom: 1rem;
 
                     a,
                     a:visited {
                         color: white;
                         text-decoration: none;
-                        
+                        text-transform: uppercase;
+                        font-weight: 600;
                     }
 
                     a:hover,
