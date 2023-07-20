@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main archive-main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -21,7 +21,7 @@ get_header();
 				?>
 				<h1><?php echo $archive_title; ?></h1>
 			</header><!-- .page-header -->
-
+			<div class="border-div">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -44,7 +44,7 @@ get_header();
 
 		endif;
 		?>
-
+		</div>
 	</main><!-- #main -->
 
 <?php
