@@ -277,12 +277,15 @@ function woocommerce_template_loop_product_title() {
 	echo '<h3 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h3>';
 }
 
-// change product loop image size
-function woocommerce_template_loop_product_thumbnail() {
-	global $product;
-
-	echo $product->get_image('medium');
+// change all woocommerce product image sizes to medium
+function custom_woocommerce_get_image_size_thumbnail( $size ) {
+	return array(
+		'width'  => 300,
+		'height' => 300,
+		'crop'   => 0,
+	);
 }
+add_filter( 'woocommerce_get_image_size_thumbnail', 'custom_woocommerce_get_image_size_thumbnail' );
 
 // change product bundle image size... code copied from plugin template then adjusted
 function custom_woocommerce_bundled_product_image_html($html, $product_id, $bundled_item) {
