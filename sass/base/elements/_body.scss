@@ -7,3 +7,20 @@ body {
 	position: relative;
 	overflow-x: hidden;
 }
+main {
+	position: relative;
+	width: 90%;
+	left: 5%;
+	border-left: solid 3px $brand__color; 
+	border-right: solid 3px $brand__color;
+	padding: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+	main {
+		width: 70%;
+		left: 15%;
+		padding: 5rem;
+	}
+}

@@ -2,3 +2,19 @@
     padding: 0 1.5rem;
     margin: 2rem 0;
 }
+
+.swiper-slide {
+    margin: 0 auto;
+    & p {
+        
+        max-width: 65%;
+        margin: 0 auto;
+    };
+}
+@media screen and (min-width: 768px) {
+    .custom-logo-link {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+    
