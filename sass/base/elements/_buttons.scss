@@ -20,12 +20,18 @@ input[type="submit"] {
 	}
 }
 .order-btn {
+	display: flex;
+	justify-content: center;
 	position: relative;
+	text-decoration: none;
+	
 }
 .order-btn p {
+	border: solid 2px $brand__color;
+	border-radius: 25px;
+	padding: 0.5rem;
 	position: relative;
-	width: 25%;
-	right: 15%;
+	width: 35%;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
