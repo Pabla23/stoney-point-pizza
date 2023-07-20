@@ -1,0 +1,186 @@
+.page-id-29 {
+    h2 {
+        text-align: center;
+    }
+
+    section {
+        margin: 2rem auto 3rem;
+    }
+
+    .order-btn {
+        background-color: #600000;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        color: #fff;
+        text-decoration: none;
+        position: absolute;
+        z-index: 100;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        &:hover {
+            background-color: #a00000;
+        }
+    }
+}
+
+.about-intro-section {
+    position: relative;
+    width: 100vw;
+    left: -1.5rem;
+    top: -2rem;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 6px;
+        left: 0;
+        right: 0;
+        background-color: rgb(0, 0, 0, 0.479);
+
+    }
+    h1 {
+        position: absolute;
+        color: #fff;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+}
+
+.about-info-section {
+    max-width: 850px;
+    img {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.about-founders-section {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    h3 {
+        text-align: center;
+    }
+    img {
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    p {
+        margin: 0 0 0.5rem 0;
+    }
+}
+
+.about-testimonial-section {
+    .wp-block-quote {
+        padding: 1rem;
+        margin: 1rem 0;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 6px;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 5px 4px #eee;
+        } 
+    }
+    .testimonial-page-btn {
+        background-color: #600000;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        color: #fff;
+        text-decoration: none;
+        max-width: 97px;
+        display: block;
+        margin: 2rem auto;
+    }
+}
+
+.about-standards-section {
+    max-width: 700px;
+    a {
+        background-color: #600000;
+        padding: 0.6rem;
+        border-radius: 0.3rem;
+        color: #fff;
+        text-decoration: none;
+        max-width: 97px;
+        display: block;
+        margin: 2rem auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    .page-id-29 {
+        h2 {
+            font-size: 1.8rem;
+        }
+        .site-main {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 800px 1fr;
+            grid-template-rows: 800px repeat(4, minmax(300px, auto));
+            .about-info-section, .about-founders-section, .about-testimonial-section, .about-standards-section {
+                grid-column: 2;
+            }
+        }
+    }
+
+    .about-intro-section {
+        grid-column: 1 / 5;
+        top: -20rem;
+        left: 0;
+        object-fit: cover;
+        overflow: hidden;
+        height: 65rem;
+        h1 {
+            font-size: 4rem;
+            top: 50%;
+            left: 50%;
+        }
+        &::before {
+            bottom: 0;
+        }
+        .order-btn {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.2rem;
+            top: 70%;
+        }
+    }
+
+    .about-founders-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        h2 {
+            grid-column: 1 / 3;
+        }
+    }
+
+    .about-testimonial-section {
+        width: 800px;
+        .rand-testimonial {
+            display: flex;
+            justify-content: space-around;
+            blockquote {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-id-29 {
+        .site-main {
+            grid-template-columns: 1fr 1000px 1fr;
+        }
+    }
+}

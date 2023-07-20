@@ -6,6 +6,18 @@
 --------------------------------------------- */
 @import "content/posts-and-pages";
 
+/* About page
+--------------------------------------------- */
+@import "content/about";
+
+/* Front page
+--------------------------------------------- */
+@import "content/front-page";
+
+/* Testimonials page
+--------------------------------------------- */
+@import "content/testimonials";
+
 /* Comments
 --------------------------------------------- */
 @import "comments/comments";
@@ -25,3 +37,10 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+
+/* Contact and Locations page
+--------------------------------------------- */
+@import "content/contact-location";
+
+
