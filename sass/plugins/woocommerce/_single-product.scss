@@ -109,7 +109,10 @@
 }
 
 .single-product {
-	padding: 0 1.5rem;
+
+	.site-main {
+		padding: 0 1.5rem;
+	}
 
 	.price {
 		font-weight: bold;
