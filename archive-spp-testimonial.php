@@ -1,7 +1,6 @@
 <?php
 /**
- * The template for displaying the Testimonials page
- *
+ * The template for displaying archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -13,23 +12,15 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<h1><?php the_title(); ?></h1>
+			<header class="page-header">
+				<?php
+					$archive_title = get_the_archive_title();
+					$archive_title = str_replace('Archives: ', '', $archive_title);
+				?>
+				<h1><?php echo $archive_title; ?></h1>
+			</header><!-- .page-header -->
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		<?php
+			<?php
 				$args = array(
 					'post_type'      => 'spp-testimonial',
 					'posts_per_page' => -1,
