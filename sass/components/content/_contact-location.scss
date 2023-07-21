@@ -25,22 +25,14 @@
     margin: 20px 0;
   }
 
-  // Fixes potential theme css conflict.
   .acf-map img {
     max-width: inherit !important;
   }
 
-  // added styles for <h1>Contact and Locations</h1> and <article id="post-31" class="post-31 page type-page status-publish hentry">
   h1, .entry-title {
     text-align: center;
     font-size: 2rem;
   }
-  
-  // .entry-title {
-  //   text-align: center;
-  //   color: #800000;
-  //   font-size: 2rem;
-  // }
 
   #post-31 {
     display: flex;
@@ -396,49 +388,6 @@
   .contact-locations-section a[href*="menu"]:hover::after {
     content: " \2192"; /* Add a right arrow after "menu". */ 
     color: #800000; 
-  }
-
-  /*  styling for screens (max-width: 320px) */
-  @media screen and (max-width: 320px) {
-
-    .contact-locations-section {  }
-
-    .contact-locations-section article { }
-
-    .contact-locations-section article a {    }
-  }
-
-  /*  styling for screens (min-width: 321px) and (max-width: 360px) */
-  @media screen and (min-width: 321px) and (max-width: 360px) {
-
-    .contact-locations-section { }
-
-    .contact-locations-section article { }
-
-    .contact-locations-section article a {   }
-  
-  }
-
-  /*  styling for screens (min-width: 361px) and (max-width: 480px) */
-  @media screen and (min-width: 361px) and (max-width: 480px) {
-
-    .contact-locations-section { }
-
-    .contact-locations-section article {  }
-
-    .contact-locations-section article a {  }
-  
-  }
-
-  /*  styling for screens (min-width: 481px) and (max-width: 640px) */
-  @media screen and (min-width: 481px) and (max-width: 640px) {
-
-    .contact-locations-section { }
-
-    .contact-locations-section article { }
-
-    .contact-locations-section article a { }
-  
   }
 
   /* styling for screens 641px to 960px */

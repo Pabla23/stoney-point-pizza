@@ -133,17 +133,11 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            // display: grid;
-            // grid-template-columns: 1fr 800px 1fr;
-            // grid-template-rows: 800px repeat(4, minmax(300px, auto));
-            // .about-info-section, .about-founders-section, .about-testimonial-section, .about-standards-section {
-            //     grid-column: 2;
-            // }
         }
     }
 
+
     .about-intro-section {
-        // grid-column: 1 / 5;
         top: -2rem;
         left: 0;
         object-fit: cover;

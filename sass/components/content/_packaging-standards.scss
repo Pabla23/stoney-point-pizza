@@ -1,14 +1,13 @@
 .page-id-33 {
 
-  // <section class="standards-intro-section">
   .standards-intro-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 20px;  /* space to separate sections */
-    margin-bottom: 20px;  /* space to separate sections */
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 
     width: 80%;
     padding: 20px;
@@ -123,8 +122,8 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 20px;  /* space to separate sections */
-    margin-bottom: 20px;  /* space to separate sections */
+    margin-top: 20px;  
+    margin-bottom: 20px;  
 
     width: 100%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -149,7 +148,6 @@
   }
 
   section p {
-    // color: #800000;
     color: black;
     margin-bottom: 10px;
   }
