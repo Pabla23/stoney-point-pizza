@@ -193,6 +193,14 @@ function stoney_point_scripts() {
 add_action( 'wp_enqueue_scripts', 'stoney_point_scripts' );
 
 /**
+ * Lower Yoast SEO Metabox location
+ */
+function yoast_to_bottom(){
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
+
+/**
  * Admin customization features
  */
 require get_template_directory() . '/inc/admin-customization.php';
