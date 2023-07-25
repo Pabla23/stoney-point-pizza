@@ -334,7 +334,7 @@ function spp_project_scripts() {
 		
 		wp_enqueue_script(
 			'google-maps-api',
-			'https://maps.googleapis.com/maps/api/js?key=AIzaSyCBUzgsqiY1afkHDyj99TOzzlhvFRBoemg&callback=Function.prototype',
+			'https://maps.googleapis.com/maps/api/js?key=&callback=Function.prototype',
 			array(),
 			null,
 			true
@@ -349,7 +349,7 @@ add_action( 'wp_enqueue_scripts', 'spp_project_scripts' );
  */
 function my_acf_init() {
     
-    acf_update_setting('google_api_key', 'AIzaSyCBUzgsqiY1afkHDyj99TOzzlhvFRBoemg');
+    acf_update_setting('google_api_key', '');
 }
 
 add_action('acf/init', 'my_acf_init');
